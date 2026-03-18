@@ -1,0 +1,21 @@
+name: Robot_de_Bienvenida_Empresarial
+on: [push] # Se activa automáticamente al detectar cambios
+
+
+jobs:
+  configuracion_inicial:
+    runs-on: ubuntu-latest # Ejecuta un servidor virtual gratuito en la nube
+    steps:
+      - name: 1. Saludo de Bienvenida
+        run: echo "¡Hola equipo! Iniciando proceso de automatización para el nuevo proyecto."
+
+
+      - name: 2. Verificación de Herramientas
+        run: |
+          echo "Comprobando que el sistema esté listo..."
+          python --version
+          echo "Servidor virtual verificado con éxito."
+
+
+      - name: 3. Finalización del Proceso
+        run: echo "La configuración automática ha terminado. ¡Buen trabajo!"
